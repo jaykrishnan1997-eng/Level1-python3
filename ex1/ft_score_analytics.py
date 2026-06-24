@@ -13,10 +13,10 @@ def main():
     temp_list = []
     for j in range(0, length - 1):
         if (j + 1 <= length):
-            temp_list[j] = int(sys.argv[j + 1])
-    i: int = 1
+            temp_list.append(int(sys.argv[j + 1]))
+    i: int = 0
     sum: int = 0
-    while i < length:
+    while i < length - 1:
         sum = sum + temp_list[i]
         i += 1
     print(f"Total score: {sum}")
