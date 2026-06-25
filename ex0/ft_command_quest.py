@@ -1,8 +1,20 @@
 #!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   ft_command_quest.py                                  :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/06/25 14:00:31 by jkrishna            #+#    #+#            #
+#   Updated: 2026/06/25 14:06:58 by jkrishna           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
+
 import sys
 
 
-def main():
+def main() -> None:
     print("=== Command Quest ===")
     print(f"Program name: {sys.argv[0]}")
     length: int = len(sys.argv)
