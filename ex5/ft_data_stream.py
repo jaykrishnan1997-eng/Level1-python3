@@ -7,7 +7,7 @@
 #   By: jkrishna <jkrishna@student.42.fr>            +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/06/27 14:13:29 by jkrishna            #+#    #+#            #
-#   Updated: 2026/06/27 16:36:47 by jkrishna           ###   ########.fr      #
+#   Updated: 2026/06/27 16:43:12 by jkrishna           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -23,7 +23,6 @@ def gen_event() -> typing.Generator[tuple[str, str], None, None]:
     ]
     names = ['alice', 'bob', 'dylan', 'charlie']
     while True:
-
         yield (random.choice(names), random.choice(actions))
 
 
@@ -42,7 +41,7 @@ if __name__ == "__main__":
     gen = gen_event()
     for i in range(0, 1000):
         event_gen = next(gen)
-        # print(f"Event {i}: Player {event_gen[0]} did action {event_gen[1]}")
+        print(f"Event {i}: Player {event_gen[0]} did action {event_gen[1]}")
     event_list = [next(gen) for _ in range(10)]
     print(f"Built list of 10 events: {event_list}")
     for event in consume_event(event_list):
